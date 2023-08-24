@@ -70,7 +70,7 @@ class GeneticTgiSegmenter(Segmenter):
         self.increase_force = increase_force
         self.decrease_increase_force = decrease_increase_force
         self.silent = silent
-        self.model: GeneticAlgorithm | None  = None
+        self.model: GeneticAlgorithm | None = None
 
     def fit(self, images: tp.Sequence[np.ndarray], masks: tp.Sequence[np.ndarray]) -> None:
         max_size = max(img.shape[1] for img in images), max(img.shape[0] for img in images)
